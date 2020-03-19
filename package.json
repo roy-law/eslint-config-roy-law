@@ -10,6 +10,8 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
+    "@commitlint/cli": "^8.3.5",
+    "@commitlint/config-conventional": "^8.3.4",
     "@typescript-eslint/eslint-plugin": "^2.24.0",
     "@typescript-eslint/parser": "^2.24.0",
     "babel-eslint": "^10.1.0",
@@ -25,6 +27,7 @@
     "eslint-plugin-react-hooks": "^2.5.0",
     "eslint-plugin-react-native": "^3.8.1",
     "eslint-restricted-globals": "^0.2.0",
+    "husky": "^4.2.3",
     "prettier": "^1.19.1",
     "typescript": "^3.8.3"
   },
@@ -34,6 +37,11 @@
   "config": {
     "commitizen": {
       "path": "./node_modules/cz-conventional-changelog"
+    }
+  },
+  "husky": {
+    "hooks": {
+      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
     }
   }
 }
