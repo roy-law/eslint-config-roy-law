@@ -12,7 +12,6 @@ jobs:
         provider: script
         skip_cleanup: true
         script:
-          - npm install
           - npx semantic-release
         on:
           branch: master
