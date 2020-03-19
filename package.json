@@ -1,11 +1,11 @@
 {
   "name": "eslint-config-roy-law",
-  "version": "1.0.0",
+  "version": "0.0.0",
   "description": "",
   "main": "react-native.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "commit": "git-cz"
+    "commit": "git-cz",
+    "semantic-release": "npx semantic-release"
   },
   "author": "",
   "license": "ISC",
@@ -29,7 +29,8 @@
     "eslint-restricted-globals": "^0.2.0",
     "husky": "^4.2.3",
     "prettier": "^1.19.1",
-    "typescript": "^3.8.3"
+    "typescript": "^3.8.3",
+    "semantic-release": "^17.0.4"
   },
   "peerDependencies": {
     "eslint": ">=6"
@@ -43,5 +44,9 @@
     "hooks": {
       "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
     }
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/roy-law/eslint-config-roy-law.git"
   }
 }
