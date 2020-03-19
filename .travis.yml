@@ -1,4 +1,3 @@
-os: linux
 language: node_js
 node_js:
   - stable
@@ -9,5 +8,11 @@ cache:
 jobs:
   include:
     - stage: release
-      script:
-        - npm test
+      deploy:
+        provider: script
+        skip_cleanup: true
+        script:
+          - npm install
+          - npx semantic-release
+        on:
+          branch: master
